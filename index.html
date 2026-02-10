@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Felices 4 MESEEEEEEES 💗</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins&display=swap" rel="stylesheet">
+
+<style>
+body{
+margin:0;
+font-family:'Poppins', sans-serif;
+background:#2F4156;
+color:white;
+overflow-x:hidden;
+}
+
+.decor{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+pointer-events:none;
+z-index:-1;
+font-size:40px;
+opacity:0.25;
+}
+
+header{
+background:#567C8D;
+padding:40px;
+text-align:center;
+}
+
+.container{
+padding:40px;
+}
+
+.card{
+background:#F5EFEB;
+color:#2F4156;
+max-width:900px;
+margin:auto;
+padding:30px;
+border-radius:20px;
+}
+
+.video-section{
+display:flex;
+align-items:center;
+justify-content:center;
+margin:50px 0;
+gap:40px;
+background:#C8D9E6;
+padding:30px;
+border-radius:20px;
+}
+
+
+.video-text{
+width:30%;
+font-size:18px;
+}
+
+video{
+width:230px;
+border-radius:15px;
+background:black;
+}
+
+footer{
+background:#567C8D;
+text-align:center;
+padding:20px;
+margin-top:40px;
+}
+</style>
+</head>
+
+<body>
+
+<div id="login" style="
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:#2F4156;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+z-index:9999;
+">
+
+<h2>Ingresa la contraseña 💗</h2>
+
+<input id="pass" type="password" placeholder="Contraseña"
+style="padding:10px;border-radius:10px;border:none;margin:15px;">
+
+<button onclick="checkPass()"
+style="background:#567C8D;color:white;border:none;
+padding:10px 20px;border-radius:20px;cursor:pointer;">
+Entrar
+</button>
+
+<p id="error"></p>
+
+</div>
+
+
+<div class="decor" id="decor"></div>
+
+<header>
+<h1>Felices 4 MESEEEEEEES 💗</h1>
+<h3>Sip, otra pagina web :v</h3>
+</header>
+
+<div class="container">
+
+<div class="card">
+<h3>
+    Mi amorcito preciosa🌻💗
+</h3>
+<p>
+Hoy es un dia muy especial para ambos, hoy cumplimos 4 meses<br>
+desde que me aceptste como dolor de cabeza recurrente :D<br>
+Quiero recordarte que a pesar de la distancia, a pesar de los momentos "ujuuuuum", siempre seras mi princesa💗<br>
+No eres una persona mas en mi vida, eres la niña de mis ojos💗<br>
+La persona que me hace feliz, aun sin siquiera estar presente :3<br>
+<br>
+Pensaba mucho que decirte hoy, y he pensado en "¿Que hubiera pasado si no te buscaba ese dia?"<br>
+y la verdad, me alegra no saberlo, porque que seas mi novia a sido la forma en la que Dios me demuestra su amor💗<br>
+<br>
+En serio, gracias por todo, por como eres, como me tratas, como me amas, por ser tu misma conmigo💗<br>
+Te amo, te amo y eso jamas cambiara, porque si o si<br>
+Debemos ser El Señor, usted y yo, para Siempre💗
+
+</p>
+
+<!-- VIDEO 1 TEXTO IZQ / VIDEO DER -->
+<div class="video-section">
+
+<div class="video-text">
+Uno de aqui andaba practicando señas :p<br>
+la verdad, espero te guste y por lo menos te saque una sonrisa :3<br>
+<br>
+Ti amoooooooo muchisisisisimo Mi chocolatito🍫💗
+</div>
+
+<video controls>
+<source src="video_uno.mp4" type="video/mp4">
+</video>
+
+</div>
+
+<!-- VIDEO 2 VIDEO IZQ / TEXTO DER -->
+<div class="video-section">
+
+<video controls>
+<source src="video_dos.mp4" type="video/mp4">
+</video>
+
+<div class="video-text">
+Pa' cuando?<br>
+Pa' cuando?:3<br>
+</div>
+
+</div>
+<div style="margin-top:40px;text-align:center;">
+
+<p style="font-size:18px;line-height:1.7;">
+Como dato curioso :v<br>
+La cancion que esta sonando de fondo es una canion que en mis tiempos de juventud me gustaba mucho<br>
+sip, era un friki de gustos raros :v, pero asi me quieres<br>
+En fin, la historia es que cuando estaba en el colegio prometi que si conocia a una chica a la que amara, le dedicaria esta cancion<br>
+y pues a ti te amo💗<br>
+Gracias por dejarme ser sincero con usted, y ser yo mismo sin preocuparme por lo que pienses :'3<br>
+En fin:
+<h2>Felices 4 Meseeeeeeeeees🌻💗</h2>
+</p>
+
+</div>
+
+</div>
+</div>
+
+<footer>
+Con amor, Pablum🌻💗<br>
+pdta: Lo del besuqueo no es broma :3
+</footer>
+
+<script>
+const decor = document.getElementById("decor");
+const emojis = ["🌻","💗"];
+
+for(let i=0;i<45;i++){
+let span=document.createElement("span");
+span.innerHTML=emojis[Math.floor(Math.random()*emojis.length)];
+span.style.position="absolute";
+span.style.left=Math.random()*100+"%";
+span.style.top=Math.random()*100+"%";
+decor.appendChild(span);
+}
+
+function checkPass(){
+const clave = "Chocolatito";   // CAMBIA AQUÍ TU CONTRASEÑA/
+
+if(document.getElementById("pass").value === clave){
+document.getElementById("login").style.display="none";
+}else{
+document.getElementById("error").innerText="Contraseña incorrecta 💔";
+}
+}
+
+
+</script>
+
+<audio autoplay loop>
+  <source src="Vivo_por_Ti.mpeg" type="audio/mpeg">
+</audio>
+</body>
+
+</html>
