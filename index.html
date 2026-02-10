@@ -204,21 +204,24 @@ decor.appendChild(span);
 }
 
 function checkPass(){
-const clave = "Chocolatito";   // CAMBIA AQUÍ TU CONTRASEÑA/
+  const clave = "Chocolatito";
 
-if(document.getElementById("pass").value === clave){
-document.getElementById("login").style.display="none";
-}else{
-document.getElementById("error").innerText="Contraseña incorrecta 💔";
+  if(document.getElementById("pass").value === clave){
+    document.getElementById("login").style.display = "none";
+    document.getElementById("musica").play(); // 🎵 Aquí empieza la canción
+  } else {
+    document.getElementById("error").innerText = "Contraseña incorrecta 💔";
+  }
 }
-}
+
 
 
 </script>
 
-<audio autoplay loop>
+<audio id="musica" loop>
   <source src="Vivo_por_Ti.mpeg" type="audio/mpeg">
 </audio>
 </body>
 
 </html>
+
